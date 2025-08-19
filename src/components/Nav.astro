@@ -1,0 +1,19 @@
+<nav class="flex items-center justify-between">
+  {
+    [
+      { name: 'Services', link: '#services' },
+      { name: 'About', link: '#about' },
+      { name: 'Testimonials', link: '#testimonials' },
+      { name: 'Gallery', link: '#gallery' },
+      { name: 'Contact', link: '#contact' },
+    ].map((navItem) => (
+      <a
+        href={navItem.link}
+        class="text-gray-700 hover:text-green-600 font-medium transition-colors"
+      >
+        {navItem.name}
+      </a>
+    ))
+  }
+  <button class="bg-green-900 hover:bg-green-700 text-white">Order now</button>
+</nav>
