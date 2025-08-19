@@ -1,1 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-gutter: stable;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white;
+  }
+
+  button,
+  a {
+    user-select: none;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block; /* Убирает лишнее пространство снизу */
+    max-width: 100%; /* Предотвращает выезжание за пределы контейнера */
+    height: auto; /* Сохраняет пропорции */
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit; /* Наследует шрифт у родителя */
+  }
+}
